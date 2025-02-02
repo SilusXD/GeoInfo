@@ -32,8 +32,13 @@ namespace GeoInfo.View
             }
         }
 
-        private bool DeleteInfo(List<CountriesInfo> countriesForRemoving, List<CitiesInfo> citiesForRemoving)
+        public bool DeleteInfo(List<CountriesInfo> countriesForRemoving, List<CitiesInfo> citiesForRemoving)
         {
+            if(countriesForRemoving.Count == 0 || countriesForRemoving == null || citiesForRemoving.Count == 0 || citiesForRemoving == null) 
+            {
+                MessageBox.Show("Данные не выбраны!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return false;
+            }
             try
             {
                 GeoInfoEE.GetContext().CountriesInfo.RemoveRange(countriesForRemoving);
@@ -43,7 +48,7 @@ namespace GeoInfo.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show(ex.Message.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
             return true;

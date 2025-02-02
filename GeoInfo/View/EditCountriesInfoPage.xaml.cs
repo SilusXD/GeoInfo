@@ -73,10 +73,6 @@ namespace GeoInfo.View
 
                 GeoInfoEE.GetContext().SaveChanges();
                 MessageBox.Show("Данные успешно обнолвены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-                if (NavigationService.CanGoBack)
-                {
-                    NavigationService.GoBack();
-                }
             }
             catch (Exception ex)
             {
@@ -94,7 +90,13 @@ namespace GeoInfo.View
             int.TryParse(txtBoxPopulation.Text, out int population);
             int.TryParse(txtBoxArea.Text, out int area);
 
-            UpdateInfo(cmbCountries.Text, cmbUser.Text, dateTime, lat, lon, population, area);
+            if(UpdateInfo(cmbCountries.Text, cmbUser.Text, dateTime, lat, lon, population, area))
+            {
+                if (NavigationService.CanGoBack)
+                {
+                    NavigationService.GoBack();
+                }
+            }
         }
     }
 }

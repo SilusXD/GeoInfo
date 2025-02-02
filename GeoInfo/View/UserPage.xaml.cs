@@ -146,6 +146,13 @@ namespace GeoInfo.View
                 return false;
             }
 
+            if(string.IsNullOrEmpty(countryInfo.Value.name_ru) || countryInfo.Value.lat == 0 || countryInfo.Value.lon == 0 ||
+                countryInfo.Value.population == 0 || countryInfo.Value.area == 0)
+            {
+                MessageBox.Show("Нет данных для записи!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return false;
+            }
+
             string countryName = countryInfo.Value.name_ru;
             if (GeoInfoEE.GetContext().Countries.Where(x => x.Country == countryName).Count() < 1)
             {

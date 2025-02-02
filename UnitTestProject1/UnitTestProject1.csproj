@@ -63,6 +63,10 @@
     <Compile Include="Tests1AuthPageReg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests2AuthPageAuth.cs" />
+    <Compile Include="Tests3UserPageCreateInfo.cs" />
+    <Compile Include="Tests5IEditCitiesInfoPageUpdateInfos.cs" />
+    <Compile Include="Tests4IEditCountriesInfoPageUpdateInfo.cs" />
+    <Compile Include="Tests6InfoListsPageDeleteInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

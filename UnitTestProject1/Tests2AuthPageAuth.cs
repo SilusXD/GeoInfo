@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using GeoInfo.Models;
 
-namespace UnitTestProject
+namespace UnitTestProject1
 {
     [TestClass]
     public class Tests2AuthPageAuth //Start after TestsAuthPageReg
