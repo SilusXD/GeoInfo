@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ce2cb327950b4a59802fc0a04719fef5" Name="Diagram1">
+        <EntityTypeShape EntityType="GeoInfoModel.Cities" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoInfoModel.CitiesInfo" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoInfoModel.Countries" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoInfoModel.CountriesInfo" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoInfoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoInfoModel.Users" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="GeoInfoModel.FK_CitiesInfo_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoInfoModel.FK_CitiesInfo_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoInfoModel.FK_CountriesInfo_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoInfoModel.FK_CountriesInfo_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
